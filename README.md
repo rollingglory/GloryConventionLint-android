@@ -219,8 +219,6 @@ Example phrase : *LoginActivity, UserFragment, UserSession*
 &nbsp;
 
 #### ClassCase Convention
-If you create class extends of table below, use this convention.
-
 <table>
     <tbody>
          <tr>
@@ -234,53 +232,43 @@ If you create class extends of table below, use this convention.
             <td><b>PostFix</b></td>
         </tr>
         <tr>
-            <td>AppCompatActivity</td>
-            <td>androidx.appcompat.app<br/>android.support.v7.app</td>
+            <td>Activity<br/>AppCompatActivity<br/>FragmentActivity</td>
+            <td>android.app.Activity<br/>
+android.support.v7.app.AppCompatActivity<br/>	
+androidx.appcompat.app.AppCompatActivity<br/>
+android.support.v4.app.FragmentActivity<br/> 	
+androidx.fragment.app.FragmentActivity</td>
             <td></td>
             <td>Activity</td>
-            <td><i>Yourname<b>Activity</b><i></td>
+            <td><i>Yourclass<b>Activity</b><i></td>
         </tr>
-         <tr>
-            <td>Activity</td>
-            <td>android.app</td>
-            <td></td>
-            <td>Activity</td>
-            <td><i>Yourname<b>Activity</b><i></td>
-        </tr>
-       <tr>
-            <td>ActivityGlory</td>
-            <td>com.rollingglory.glorysdk.layer</td>
-            <td></td>
-            <td>Activity</td>
-            <td><i>Yourname<b>Activity<b><i></td>
-        </tr>
-       <tr>
-            <td>Fragment</td>
-            <td>android.support.v4.app.Fragment<br/>androidx.fragment.app.Fragment</td>
+        <tr>
+            <td>Fragment<br/>DialogFragment</td>
+            <td>android.support.v4.app.Fragment<br/>	
+androidx.fragment.app.Fragment<br/>
+android.support.v4.app.DialogFragment<br/>	
+androidx.fragment.app.DialogFragment</td>
             <td></td>
             <td>Fragment</td>
-            <td><i>Yourname<b>Fragment<b></i></td>
-        </tr>   
+            <td><i>Yourclass<b>Fragment</b><i></td>
+        </tr>
         <tr>
-            <td>FragmentGlory</td>
-            <td>com.rollingglory.glorysdk.layer</td>
-            <td></td>
-            <td>Fragment</td>
-            <td><i>Yourname<b>Fragment<b></i></td>
-        </tr>        
-        <tr>
-            <td>Service</td>
-            <td>android.app</td>
+            <td>Service<br/>IntentService<br/>JobService<br/>JobIntentService</td>
+            <td>android.app.Service<br/>
+android.app.IntentService<br/>
+android.app.job.JobService<br/>
+android.support.v4.app.JobIntentService<br/> 	
+androidx.core.app.JobIntentService</td>
             <td></td>
             <td>Service</td>
-            <td><i>Yourname<b>Service<b></i></td>
-        </tr>   
+            <td><i>Yourclass<b>Service</b><i></td>
+        </tr> 
         <tr>
-            <td>ServiceGlory</td>
-            <td>com.rollingglory.glorysdk.layer</td>
+            <td>BroadcastReceiver</td>
+            <td>android.content.BroadcastReceiver</td>
             <td></td>
-            <td>Service</td>
-            <td><i>Yourname<b>Service<b></i></td>
+            <td>Receiver</td>
+            <td><i>Yourclass<b>Receiver</b><i></td>
         </tr>  
    </tbody>
 </table>
@@ -427,7 +415,7 @@ class HomeActivity extends AppCompatActivity{
         <tr>
             <td>Font</td>
             <td><br/></td>
-           <td>-regular<br/>-bold</br>-italic</td>
+           <td>-regular<br/>-bold</br>-semi-bold</br>-italic</td>
             <td><i>robot<b>-regular</b><i></td>
         </tr>
    </tbody>
@@ -441,43 +429,113 @@ class HomeActivity extends AppCompatActivity{
 <table>
     <tbody>
          <tr>
-            <td rowspan=2><b>Extends Of</b></td>
+            <td rowspan=2><b>Class</b></td>
             <td rowspan=2><b>Package's</b></td>
             <td colspan=2 align=center><b>ID Convention</b></td>
-            <td rowspan=2><b>Example ID</b></td>
+            <td rowspan=2><b>Example ID's</b></td>
         </tr>
         <tr>
-            <td><b>PreFix</b></td>
-            <td><b>PostFix</b></td>
+            <td><b>PreFix's</b></td>
+            <td><b>PostFix's</b></td>
         </tr>
         <tr>
             <td>TextView</td>
             <td>android.widget.TextView</td>
             <td>@+id/tv_</td>
             <td></td>
-            <td><i>@+id/tv_<b>yourid</b><i></td>
+            <td><i>@+id/<b>tv_</b>yourid<i></td>
         </tr>
+        <tr>
+            <td>EditText</td>
+            <td>android.widget.EditText</td>
+            <td>@+id/et_</td>
+            <td></td>
+            <td><i>@+id/<b>et_</b>yourid<i></td>
+        </tr>   
        <tr>
             <td>Button</td>
             <td>android.widget.Button</td>
             <td>@+id/btn_</td>
             <td></td>
-            <td><i>@+id/btn_<b>yourid</b><i></td>
+            <td><i>@+id/<b>btn_</b>yourid<i></td>
         </tr>
         <tr>
             <td>ImageView</td>
             <td>android.widget.ImageView</td>
             <td>@+id/iv_</td>
             <td></td>
-            <td><i>@+id/iv_<b>yourid</b><i></td>
+            <td><i>@+id/<b>iv_</b>yourid<i></td>
         </tr>
         <tr>
-            <td>LinearLayout<br/>RelativeLayout<br/>CoordinatorLayout</td>
-            <td>android.widget.LinearLayout<br/>android.widget.RelativeLayout<br/>android.support.design.widget.CoordinatorLayout<br/>androidx.coordinatorlayout.widget.CoordinatorLayout</td>
+            <td>LinearLayout<br/>RelativeLayout<br/>ConstraintLayout<br/>CoordinatorLayout</td>
+            <td>android.widget.LinearLayout<br/>android.widget.RelativeLayout<br/>android.support.constraint.ConstraintLayout<br/>androidx.constraintlayout.widget.ConstraintLayout<br/>android.support.design.widget.CoordinatorLayout<br/>androidx.coordinatorlayout.widget.CoordinatorLayout</td>
             <td>@+id/content_</td>
             <td></td>
-            <td><i>@+id/content_<b>yourid</b><i></td>
+            <td><i>@+id/<b>content_</b>yourid<i></td>
+        </tr>  
+        <tr>
+            <td>AppBarLayout</td>
+            <td>android.support.design.widget.AppBarLayout<br/>com.google.android.material.appbar.AppBarLayout</td>
+            <td>@+id/ab_</td>
+            <td></td>
+            <td><i>@+id/<b>ab_</b>yourid<i></td>
         </tr>
+        <tr>
+            <td>CollapsingToolbarLayout</td>
+          <td>android.support.design.widget.CollapsingToolbarLayout<br/>com.google.android.material.appbar.CollapsingToolbarLayout</td>
+            <td>@+id/ctl_</td>
+            <td></td>
+            <td><i>@+id/<b>ctl_</b>yourid<i></td>
+        </tr> 
+        <tr>
+            <td>NavigationMenu</td>
+            <td>android.support.design.internal.NavigationMenu<br/>com.google.android.material.internal.NavigationMenu</td>
+            <td>@+id/nm_</td>
+            <td></td>
+            <td><i>@+id/<b>nm_</b>yourid<i></td>
+        </tr>
+        <tr>
+            <td>NavigationMenu</td>
+            <td>android.support.v7.widget.CardView<br/>androidx.cardview.widget.CardView</td>
+            <td>@+id/cv_</td>
+            <td></td>
+            <td><i>@+id/<b>cv_</b>yourid<i></td>
+        </tr> 
+        <tr>
+            <td>TabLayout</td>
+            <td>android.support.design.widget.TabLayout<br/>com.google.android.material.tabs.TabLayout</td>
+            <td>@+id/tab_</td>
+            <td></td>
+            <td><i>@+id/<b>tab_</b>yourid<i></td>
+        </tr> 
+        <tr>
+            <td>TabItem</td>
+            <td>android.support.design.widget.TabItem<br/>com.google.android.material.tabs.TabItem</td>
+            <td>@+id/tab_item_</td>
+            <td></td>
+            <td><i>@+id/<b>tab_item_</b>yourid<i></td>
+        </tr> 
+        <tr>
+            <td>TextInputLayout</td>
+            <td>android.support.design.widget.TextInputLayout<br/>com.google.android.material.textfield.TextInputLayout</td>
+            <td>@+id/til_</td>
+            <td></td>
+            <td><i>@+id/<b>til_</b>yourid<i></td>
+        </tr> 
+        <tr>
+            <td>DrawerLayout</td>
+            <td>android.support.v4.widget.DrawerLayout<br/>androidx.drawerlayout.widget.DrawerLayout</td>
+            <td>@+id/dl_</td>
+            <td></td>
+            <td><i>@+id/<b>dl_</b>yourid<i></td>
+        </tr>    
+        <tr>
+            <td>FloatingActionButton</td>
+            <td>android.support.design.widget.FloatingActionButton<br/>com.google.android.material.floatingactionbutton.FloatingActionButton</td>
+            <td>@+id/fab_</td>
+            <td></td>
+            <td><i>@+id/<b>fab_</b>yourid<i></td>
+        </tr>       
    </tbody>
 </table>
                
